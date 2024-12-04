@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
     <title>BMI Kalculator</title>
 </head>
 <body>
-    <div>
-        <h3>Berat Badan (kg)</h3>
+    <div class="container">
         <div>
-            <input type="text" class="display" id="displayW">
+            <button class="button" id="gender" onclick="rotate()">Pria</button>
+        </div>
+        <h3>Berat Badan (kg)</h3>
+        <div class="displayDiv">
+            <input type="number" class="display" id="displayW">
         </div>
         <h3>Tinggi Badan (cm)</h3>
+        <div class="displayDiv">
+            <input type="number" class="display" id="displayH">
+        </div>
         <div>
-            <input type="text" class="display" id="displayH">
+            <button class="button" id="count" onclick="calculate()">Kalkulasi</button>
+            <button class="button" id="reset" onclick="">Reset</button>
         </div>
     </div>
+    <div class="container">
+        <h2><p id="result"></p></h2>
+    </div>
+    <script src="js\script.js"></script>
 </body>
 </html>
