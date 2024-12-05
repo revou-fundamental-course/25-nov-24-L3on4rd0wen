@@ -52,4 +52,5 @@ function reset() {
     height.value = "";
     result.textContent = "";
     desc.textContent = "";
+    BMI.textContent = "";
 }
