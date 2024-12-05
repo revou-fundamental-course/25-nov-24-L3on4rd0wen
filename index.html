@@ -10,7 +10,11 @@
     <div class="container">
         <h3>Kelamin:</h3>
         <div>
-            <button class="button" id="gender" onclick="rotate()">Pria</button>
+            <button class="button" id="gender" onclick="rotate(1)">Pria</button>
+        </div>
+        <h3>Umur:</h3>
+        <div class="displayDiv">
+            <input type="number" class="display" id="displayA">
         </div>
         <h3>Berat Badan (kg)</h3>
         <div class="displayDiv">
@@ -27,6 +31,34 @@
     </div>
     <div class="container">
         <h2><p id="result"></p></h2>
+        <h2><p id="bmi"></p></h2>
+        <p id="desc"></p>
+        <table>
+            <thead>
+              <tr>
+                <th>BMI</th>
+                <th>Berat Badan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kurang dari 18.50</td>
+                <td>Kekurangan Berat Badan</td>
+              </tr>
+              <tr>
+                <td>18.50 - 24.99</td>
+                <td>Normal</td>
+              </tr>
+              <tr>
+                <td>25.00 - 29.99</td>
+                <td>Kelebihan Berat Badan</td>
+              </tr>
+              <tr>
+                <td>30.00 atau lebih</td>
+                <td>Kelebihan Berat Badan</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <script src="js\script.js"></script>
 </body>

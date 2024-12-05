@@ -3,13 +3,17 @@ let gender = document.getElementById("gender");
 let weight = document.getElementById("displayW");
 let height = document.getElementById("displayH");
 let result = document.getElementById("result");
+let desc = document.getElementById("desc");
+let BMI = document.getElementById("bmi");
 
 // memilih kelamin  || picks gender
-function rotate() {
-    if (gender.textContent === "Pria") {
-       gender.textContent = "Wanita";
-    } else {
-       gender.textContent = "Pria";
+function rotate(type) {
+    if (type === 1) {
+        if (gender.textContent === "Pria") {
+            gender.textContent = "Wanita";
+        } else {
+            gender.textContent = "Pria";
+        }
     }
 }
 
@@ -23,17 +27,22 @@ function calculate() {
     if (isNaN(w) || isNaN(h) || w <= 0 || h <= 0) {
         alert("Tolong masukkan nilai berat dan tinggi badan yang valid dan positif. \n(Please enter valid positive values for weight and height.)");
     } else {
-        const bmi = w / (h * h);
+        let bmi = w / (h * h);
+        bmi = bmi.toFixed(2);
 
-        if (bmi < 18.5) {
-            result.textContent = "Kekurangan Berat Badan (Underweight)";
-        } else if (bmi < 24.9) {
+        // Results || Hasil
+        let B = "";
+        if (bmi < 18.50) {
+            result.textContent = "Kekurangan Berat Badan";
+        } else if (bmi <= 24.99) {
             result.textContent = "Normal";
-        } else if (bmi < 29.9) {
-            result.textContent = "Kelebihan Berat Badan (Overweight)";
+        } else if (bmi <= 29.99) {
+            result.textContent = "Kelebihan Berat Badan";
         } else {
-            result.textContent = "Obesitas (Obesity)";
+            result.textContent = "Obesitas";
         }
+        BMI.textContent = bmi;
+        desc.textContent = `Dengan Bmi ${bmi}, anda terkategori ${result.textContent}. \n Cara baik menormalkan berat badan dengan mengatur pola makan.`
     }
 }
 
@@ -42,4 +51,5 @@ function reset() {
     weight.value = "";
     height.value = "";
     result.textContent = "";
+    desc.textContent = "";
 }
