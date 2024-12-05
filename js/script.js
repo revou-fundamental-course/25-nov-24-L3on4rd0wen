@@ -48,6 +48,7 @@ function calculate() {
 
 // Reset
 function reset() {
+    gender.textContent = "Pria";
     weight.value = "";
     height.value = "";
     result.textContent = "";
