@@ -35,14 +35,18 @@ function calculate() {
         if (bmi < 18.50) {
             result.textContent = "Kekurangan Berat Badan";
         } else if (bmi <= 24.99) {
-            result.textContent = "Normal";
+            result.textContent = "Berat Badan Ideal";
         } else if (bmi <= 29.99) {
             result.textContent = "Kelebihan Berat Badan";
+        } else if (bmi <= 34.99) {
+            result.textContent = "Obesitas I";
+        } else if (bmi <= 39.99) {
+            result.textContent = "Obesitas II";
         } else {
-            result.textContent = "Obesitas";
+            result.textContent = "Obesitas III";
         }
         BMI.textContent = bmi;
-        desc.textContent = `Dengan Bmi ${bmi}, anda terkategori ${result.textContent}. \n Cara baik menormalkan berat badan dengan mengatur pola makan.`
+        desc.textContent = `Dengan BMI: ${bmi}, anda terkategori ${result.textContent}. \n Cara baik mengidealkan berat badan dengan mengatur pola makan.`
     }
 }
 
